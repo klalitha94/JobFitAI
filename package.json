@@ -1,0 +1,15 @@
+{
+  "name": "jobfit-ai-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JobFit AI - Monorepo root runner",
+  "scripts": {
+    "dev": "concurrently -n \"backend,frontend\" -c \"cyan,magenta\" \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "start": "concurrently -n \"backend,frontend\" -c \"cyan,magenta\" \"npm --prefix backend start\" \"npm --prefix frontend start\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
